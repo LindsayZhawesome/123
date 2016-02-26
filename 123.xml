@@ -6,30 +6,16 @@
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_setmotors" id="450" inline="true">
-        <value name="BOTHMOVLEFT">
-          <block type="sensor_spectrometer" id="458">
-            <field name="LIGHT">YELLOW</field>
-          </block>
-        </value>
-        <value name="BOTHMOVRIGHT">
-          <block type="sensor_spectrometer" id="466">
-            <field name="LIGHT">BLUE</field>
-          </block>
-        </value>
+      <block type="movement_forward" id="282">
         <next>
-          <block type="movement_forward" id="282">
-            <next>
-              <block type="robot_delay" id="224" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="231">
-                    <field name="NUM">2530</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="movement_stop" id="327"></block>
-                </next>
+          <block type="robot_delay" id="224" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="231">
+                <field name="NUM">2530</field>
               </block>
+            </value>
+            <next>
+              <block type="movement_stop" id="327"></block>
             </next>
           </block>
         </next>
