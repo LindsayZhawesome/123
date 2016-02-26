@@ -1,23 +1,29 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="210" inline="true" x="53" y="106">
-    <value name="TIMES">
-      <block type="math_number" id="289">
-        <field name="NUM">3</field>
-      </block>
-    </value>
-    <statement name="DO">
-      <block type="movement_setmotors" id="537" inline="true">
-        <value name="BOTHMOVLEFT">
+  <block type="variables_set" id="611" inline="true" x="47" y="70">
+    <field name="VAR">item</field>
+    <value name="VALUE">
+      <block type="math_bitwise" id="602" inline="true">
+        <field name="OP">AND</field>
+        <value name="A">
           <block type="sensor_light" id="552">
             <field name="LIGHT">LEFT</field>
           </block>
         </value>
-        <value name="BOTHMOVRIGHT">
+        <value name="B">
           <block type="sensor_light" id="595">
             <field name="LIGHT">RIGHT</field>
           </block>
         </value>
-        <next>
+      </block>
+    </value>
+    <next>
+      <block type="controls_repeat" id="210" inline="true">
+        <value name="TIMES">
+          <block type="math_number" id="289">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+        <statement name="DO">
           <block type="movement_forward" id="282">
             <next>
               <block type="robot_delay" id="224" inline="true">
@@ -32,8 +38,8 @@
               </block>
             </next>
           </block>
-        </next>
+        </statement>
       </block>
-    </statement>
+    </next>
   </block>
 </xml>
