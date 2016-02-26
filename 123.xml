@@ -1,33 +1,24 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_if" id="391" inline="false" x="262" y="77">
-    <value name="IF0">
-      <block type="sensor_spectrometer" id="378">
-        <field name="LIGHT">BLUE</field>
+  <block type="controls_repeat" id="210" inline="true" x="382" y="206">
+    <value name="TIMES">
+      <block type="math_number" id="289">
+        <field name="NUM">3</field>
       </block>
     </value>
-    <statement name="DO0">
-      <block type="controls_repeat" id="210" inline="true">
-        <value name="TIMES">
-          <block type="math_number" id="289">
-            <field name="NUM">3</field>
-          </block>
-        </value>
-        <statement name="DO">
-          <block type="movement_forward" id="282">
-            <next>
-              <block type="robot_delay" id="224" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="231">
-                    <field name="NUM">2500</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="movement_stop" id="327"></block>
-                </next>
+    <statement name="DO">
+      <block type="movement_forward" id="282">
+        <next>
+          <block type="robot_delay" id="224" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="231">
+                <field name="NUM">2500</field>
               </block>
+            </value>
+            <next>
+              <block type="movement_stop" id="327"></block>
             </next>
           </block>
-        </statement>
+        </next>
       </block>
     </statement>
   </block>
